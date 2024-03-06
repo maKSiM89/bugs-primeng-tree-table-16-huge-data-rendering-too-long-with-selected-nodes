@@ -9,9 +9,9 @@ import { TreeTable } from 'primeng/treetable';
 })
 export class AppComponent implements OnInit {
   selectedNodes: TreeTableNode | TreeTableNode[] | null = [];
-  selectedAccountsIds = [1,2,3,4,5,6];
   filterValue: string = '';
   readonly files = FILES;
+  private readonly selectedAccountsIds = Array.from(Array(20000).keys());
 
   ngOnInit(): void {
     this.selectedNodes = [];
